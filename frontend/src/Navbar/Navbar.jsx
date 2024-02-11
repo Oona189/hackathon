@@ -34,10 +34,10 @@ function Navbar() {
     return (
         <nav style={navbar}>
             <div>
-                <a href="#" style={Sigrex}>Sigrex</a>
+                <a href="/" style={Sigrex}>Sigrex</a>
             </div>
             <div>
-                <a href="#" style={Accueil}>Accueil</a>
+                <a href="/" style={Accueil}>Accueil</a>
             </div>
         </nav>
     );

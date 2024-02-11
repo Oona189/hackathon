@@ -12,3 +12,10 @@
     margin-left: 10px;
     width: 100%;
   }
+  .form{
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-rows: auto minmax(auto,100px);
+    margin: 10px;
+  }
