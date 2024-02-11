@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Apprenant.associate = (models) => {
     Apprenant.belongsTo(models.Partenaire, {
-      foreignKey: 'partenaireId',
+      foreignKey: 'id',
       as: 'partenaire',
     });
     Apprenant.hasMany(models.GroupeApprenant, {
