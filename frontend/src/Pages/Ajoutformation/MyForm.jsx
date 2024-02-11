@@ -49,9 +49,11 @@ const MyForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      style={{ display: "flex", flexDirection: "column" }}
+      style={{ display: "flex", flexDirection: "column"}}
     >
-      <input
+     <div>
+     <div style={{ marginLeft: "10px" }}>Code organisme</div>
+     <input
         type="text"
         value={textValue1}
         onChange={handleInputChange1}
@@ -64,6 +66,8 @@ const MyForm = () => {
           padding: "8px",
         }}
       />
+     </div>
+      
 
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div>
@@ -100,7 +104,10 @@ const MyForm = () => {
           />
         </div>
       </div>
-      <input
+
+<div>
+<div style={{ marginLeft: "10px" }}>Objet</div>
+<input
         type="text"
         value={textValue4}
         onChange={handleInputChange4}
@@ -112,7 +119,9 @@ const MyForm = () => {
           border: "1px solid #3D3B40",
           padding: "8px",
         }}
-      />
+      /></div>
+      
+
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div>
           <div style={{ marginLeft: "10px" }}>Date debut</div>

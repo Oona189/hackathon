@@ -2,6 +2,7 @@ import React from "react";
 import "./ajoutformation.css";
 import MyForm from "./MyForm";
 
+//à centrer 
 function ajouformation() {
   return (
     <div className="container">

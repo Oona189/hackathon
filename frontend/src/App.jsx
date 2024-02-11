@@ -1,13 +1,13 @@
 
 import React from "react";
-import  "./Pages/Ajoutformation/ajoutformation.css";
-import MyForm from "./Pages/Ajoutformation/MyForm.jsx";
+import  "./Pages/Ajoutparticipant/ajoutparticipant.css";
+import Formparticipant from "./Pages/Ajoutparticipant/Formparticipant.jsx";
 
 function App() {
   return (
     <><div className="container">
-    <h2 className="title">Ajouter une formation</h2> 
-    <MyForm />
+    <h2 className="title">Ajouter un participant </h2> 
+    <Formparticipant/>
   </div></>
     
   );
