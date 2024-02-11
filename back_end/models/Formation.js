@@ -1,9 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
     const Formation = sequelize.define("Formation", {
         id: {
-          type: DataTypes.STRING(10),
+          type: DataTypes.INTEGER,
           primaryKey: true,
           allowNull: false,
+          autoIncrement:true,
         },
         objet: {
           type: DataTypes.STRING(200),

@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "./Formparticipant.css";
-
+import APIService from '../../Components/APIService';
 const Formparticipant = () => {
-  const [textValue1, setTextValue1] = useState("");
-  const [textValue2, setTextValue2] = useState("");
-  const [textValue3, setTextValue3] = useState("");
-  const [textValue4, setTextValue4] = useState("");
-  const [textValue5, setTextValue5] = useState("");
-  const [dateValue6, setDateValue6] = useState("");
-  const [textValue7, setTextValue7] = useState("");
-  const [textValue8, setTextValue8] = useState("");
-  const [textValue9, setTextValue9] = useState("");
+  const [code_organisme, setTextValue1] = useState("");
+  const [id, setTextValue2] = useState("");
+  const [nom, setTextValue3] = useState("");
+  const [prenom, setTextValue4] = useState("");
+  const [sexe, setTextValue5] = useState("");
+  const [dateNaissance, setDateValue6] = useState("");
+  const [adresse, setTextValue7] = useState("");
+  const [tel, setTextValue8] = useState("");
+  const [mail, setTextValue9] = useState("");
 
 
   
@@ -48,17 +48,13 @@ const Formparticipant = () => {
  
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("Valeur du champ 1:", textValue1);
-    console.log("Valeur du champe 2:", textValue2);
-    console.log("Valeur du champ  3:", textValue3);
-    console.log("Valeur du champ  4:", textValue4);
+    APIService.SetApprenant({code_organisme,nom,prenom,sexe,tel,mail,adresse,dateNaissance,id}).then((rest)=>alert("partenaire créé")).catch(Error => console.log(Error));
   };
   
   return (
     <form
       onSubmit={handleSubmit}
-      style={{ display: "flex", flexDirection: "column" }}
+      className="form"
     >
       
       <div style={{ display: "flex", flexDirection: "row" }}>
@@ -66,7 +62,7 @@ const Formparticipant = () => {
           <div style={{ marginLeft: "10px" }}>Code Organisme</div>
           <input
             type="text"
-            value={textValue1}
+            value={code_organisme}
             onChange={handleInputChange1}
             placeholder="Code Organisme"
             style={{
@@ -87,7 +83,7 @@ const Formparticipant = () => {
           <div style={{ marginLeft: "10px" }}>Matricule</div>
           <input
             type="text"
-            value={textValue2}
+            value={id}
             onChange={handleInputChange2}
             placeholder="Matricule"
             style={{
@@ -108,7 +104,7 @@ const Formparticipant = () => {
           <div style={{ marginLeft: "10px" }}>Nom</div>
           <input
             type="text"
-            value={textValue3}
+            value={nom}
             onChange={handleInputChange3}
             placeholder="Nom"
             style={{
@@ -129,7 +125,7 @@ const Formparticipant = () => {
           <div style={{ marginLeft: "10px" }}>Prenom</div>
           <input
             type="text"
-            value={textValue4}
+            value={prenom}
             onChange={handleInputChange4}
             placeholder="prenom"
             style={{
@@ -148,7 +144,7 @@ const Formparticipant = () => {
           <div style={{ marginLeft: "10px" }}>Sexe</div>
           <input
             type="text"
-            value={textValue5}
+            value={sexe}
             onChange={handleInputChange5}
             placeholder="Sexe"
             style={{
@@ -169,7 +165,7 @@ const Formparticipant = () => {
           <div style={{ marginLeft: "10px" }}>Date de naissance</div>
           <input
             type="date"
-            value={dateValue6}
+            value={dateNaissance}
             onChange={handleInputChange6}
             placeholder="Date de naissance"
             style={{
@@ -187,7 +183,7 @@ const Formparticipant = () => {
           <div style={{ marginLeft: "10px" }}>Adresse</div>
           <input
             type="text"
-            value={textValue7}
+            value={adresse}
             onChange={handleInputChange7}
             placeholder="Adresse"
             style={{
@@ -205,7 +201,7 @@ const Formparticipant = () => {
           <div style={{ marginLeft: "10px" }}>Téléphone</div>
           <input
             type="text"
-            value={textValue8}
+            value={tel}
             onChange={handleInputChange8}
             placeholder="Téléphone"
             style={{
@@ -226,7 +222,7 @@ const Formparticipant = () => {
           <div style={{ marginLeft: "10px" }}>Email</div>
           <input
             type="text"
-            value={textValue9}
+            value={mail}
             onChange={handleInputChange9}
             placeholder="Email"
             style={{

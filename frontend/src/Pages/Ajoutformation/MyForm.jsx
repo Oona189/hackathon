@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "./MyForm.css";
+import APIService from "../../Components/APIService";
 
 const MyForm = () => {
-  const [textValue1, setTextValue1] = useState("");
-  const [textValue2, setTextValue2] = useState("");
-  const [intValue3, setIntValue3] = useState(0);
-  const [textValue4, setTextValue4] = useState("");
-  const [dateValue5, setDateValue5] = useState("");
-  const [dateValue6, setDateValue6] = useState("");
-  const [intValue7, setIntValue7] = useState(0);
+  const [code_organisme, setTextValue1] = useState("");
+  const [code, setTextValue2] = useState("");
+  const [nbthemes, setIntValue3] = useState(0);
+  const [objet, setTextValue4] = useState("");
+  const [datedebut, setDateValue5] = useState("");
+  const [datefin, setDateValue6] = useState("");
+  const [duree, setIntValue7] = useState(0);
+  const [notes, setNotes] = useState("");
 
   const handleInputChange1 = (event) => {
     setTextValue1(event.target.value);
@@ -36,26 +38,19 @@ const MyForm = () => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("Valeur du champ 1:", textValue1);
-    console.log("Valeur du champe 2:", textValue2);
-    console.log("Valeur du champ  3:", intValue3);
-    console.log("Valeur du champ  4:", textValue4);
-    console.log("Valeur du champ  5:", dateValue5);
-    console.log("Valeur du champ 6:", dateValue6);
-    console.log("Valeur du champ 7:", intValue7);
+    APIService.SetFormation({code,code_organisme,nbthemes,datedebut,datefin,duree,notes,objet}).then((rest)=>alert("formation créée")).catch((e)=>console.log(e));
   };
 
   return (
     <form
       onSubmit={handleSubmit}
-      style={{ display: "flex", flexDirection: "column"}}
+      className="form"
     >
      <div>
      <div style={{ marginLeft: "10px" }}>Code organisme</div>
      <input
         type="text"
-        value={textValue1}
+        value={code_organisme}
         onChange={handleInputChange1}
         placeholder="code organisme."
         style={{
@@ -74,7 +69,7 @@ const MyForm = () => {
           <div style={{ marginLeft: "10px" }}>Code</div>
           <input
             type="text"
-            value={textValue2}
+            value={code}
             onChange={handleInputChange2}
             placeholder="code"
             style={{
@@ -91,7 +86,7 @@ const MyForm = () => {
           <div style={{ marginLeft: "10px" }}>Nombre de participants</div>
           <input
             type="number"
-            value={intValue3}
+            value={nbthemes}
             onChange={handleInputChange3}
             placeholder="nombre de participant."
             style={{
@@ -109,7 +104,7 @@ const MyForm = () => {
 <div style={{ marginLeft: "10px" }}>Objet</div>
 <input
         type="text"
-        value={textValue4}
+        value={objet}
         onChange={handleInputChange4}
         placeholder="Objet"
         style={{
@@ -127,7 +122,7 @@ const MyForm = () => {
           <div style={{ marginLeft: "10px" }}>Date debut</div>
           <input
             type="date"
-            value={dateValue5}
+            value={datedebut}
             onChange={handleInputChange5}
             placeholder="date debut"
             style={{
@@ -144,7 +139,7 @@ const MyForm = () => {
           <div style={{ marginLeft: "10px" }}>Date fin</div>
           <input
             type="date"
-            value={dateValue6}
+            value={datefin}
             onChange={handleInputChange6}
             placeholder="date fin"
             style={{
@@ -161,7 +156,7 @@ const MyForm = () => {
           <div style={{ marginLeft: "10px" }}>Exercice</div>
           <input
             type="number"
-            value={intValue7}
+            value={duree}
             onChange={handleInputChange7}
             placeholder="exercice"
             style={{
@@ -174,6 +169,22 @@ const MyForm = () => {
           />
         </div>
       </div>
+      <div>
+     <div style={{ marginLeft: "10px" }}>Notes</div>
+     <input
+        type="text"
+        value={notes}
+        onChange={(e)=>setNotes(e.target.value)}
+        placeholder="Notes."
+        style={{
+          width: "calc(100% - 20px)",
+          margin: "5px",
+          borderRadius: "20px",
+          border: "1px solid #3D3B40",
+          padding: "8px",
+        }}
+      />
+     </div>
       <div className="buttoncontainer">
         <button className="button" type="submit">
           Envoyer
