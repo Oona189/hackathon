@@ -5,6 +5,7 @@ const formationRoute = require("./routes/formationRoute");
 const themeRoute = require("./routes/themeRoute");
 const formateurRoute = require("./routes/formateurRoute");
 const partenaireRoute = require("./routes/partenaireRoute");
+const apprenantRoute = require("./routes/apprenantRoute");
 
 const app = express();
 
@@ -17,7 +18,7 @@ app.use("/formation", formationRoute);
 app.use("/theme", themeRoute);
 app.use("/formateur", formateurRoute);
 app.use("/partenaire", partenaireRoute);
-
+app.use("/apprenant", apprenantRoute);
 // App launching
 db.sequelize.sync().then(() => {
   app.listen(3001, () => {
