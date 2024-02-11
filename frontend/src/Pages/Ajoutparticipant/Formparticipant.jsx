@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Formparticipant.css";
-import APIService from '../../Components/APIService';
+import APIService from '../../components/APIService';
 const Formparticipant = () => {
   const [code_organisme, setTextValue1] = useState("");
   const [id, setTextValue2] = useState("");
