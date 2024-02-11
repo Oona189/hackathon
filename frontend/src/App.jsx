@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import  "./Pages/Ajoutparticipant/ajoutparticipant.css";
 import Formparticipant from "./Pages/Ajoutparticipant/Formparticipant.jsx";
 import Ajouformation from "./Pages/Ajoutformation/ajoutformation.jsx";
@@ -12,15 +11,10 @@ import Ajout_partenaire from "./Pages/AjoutPartenaire/Ajout_partenaire.jsx";
 import NavBar from "./Navbar/NavBar.jsx";
 import Formations from './Pages/Formations';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-=======
-import Navbar from "./Navbar/Navbar.jsx";
-import Ajout_Participant from "./Pages/Ajoutparticipant/Ajout_Participant.jsx";
->>>>>>> acb170ac3e95811ec8ab54b53889a448570f2465
 
 
 function App() {
   return (
-<<<<<<< HEAD
     
     <>
     <Router>
@@ -36,12 +30,5 @@ function App() {
     </Router>
     </>
     
-=======
-
-    <>
-      <Navbar />
-      <Ajout_Participant/></>
-
->>>>>>> acb170ac3e95811ec8ab54b53889a448570f2465
   );
 } export default App

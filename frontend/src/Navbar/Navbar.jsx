@@ -81,7 +81,6 @@ function NavListMenu() {
     );
 
     return (
-<<<<<<< HEAD
         <React.Fragment>
             <Menu
                 open={isMenuOpen}
@@ -121,16 +120,6 @@ function NavListMenu() {
                 <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
             </div>
         </React.Fragment>
-=======
-        <nav style={navbar}>
-            <div>
-                <a href="/" style={Sigrex}>Sigrex</a>
-            </div>
-            <div>
-                <a href="/" style={Accueil}>Accueil</a>
-            </div>
-        </nav>
->>>>>>> acb170ac3e95811ec8ab54b53889a448570f2465
     );
 }
 
