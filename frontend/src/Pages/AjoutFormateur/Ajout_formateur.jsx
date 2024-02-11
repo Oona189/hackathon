@@ -12,8 +12,9 @@ function Ajout_formateur() {
   const [civilite, setCivilite] = useState("");
   const [diplome, setDiplome] = useState("");
   const [specialite, setSpecialite] = useState("");
+  const sexes = [{ label: 'féminin', value: 'F' }, { label: 'masculin', value: 'M' }];
   const handleSubmit = (event) => {
-    APIService.SetFormateur({mail,adresse,nom,prenom,sexe,civilite,diplome,specialite}).then((rest)=>alert("formateur créé")).catch(Error => console.log(Error));
+    APIService.SetFormateur({ mail, adresse, nom, prenom, sexe, civilite, diplome, specialite }).then((rest) => alert("formateur créé")).catch(Error => console.log(Error));
   };
   return (
     <form className='form' onSubmit={handleSubmit}>
@@ -29,19 +30,22 @@ function Ajout_formateur() {
         </div>
       </div>
       <div className='row_field'>
+      <div className='field'>
+          <label className='label'>Sexe</label>
+          <select style={{width:'200px'}} className='input'onChange={(e) => setSexe(e.target.value)}>
+          {sexes.map((option)=>(<option value={sexe} key={option.value}>{option.label}</option>))}
+          </select>
+        </div>
         <div className='field'>
           <label className='label'>Civilité</label>
           <input className='input' placeholder='Civilité' type='text' value={civilite} required onChange={(event) => setCivilite(event.target.value)} />
         </div>
-        <div className='field'>
-          <label className='label'>Sexe</label>
-          <input className='input' placeholder='Sexe' type='text' value={sexe} required onChange={(event) => setSexe(event.target.value)} />
-        </div>
+
       </div>
       <div className='field'>
-          <label className='label'>Adresse</label>
-          <input className='input' placeholder='Adresse' type='text' value={adresse} required onChange={(event) => setAdresse(event.target.value)} />
-        </div>
+        <label className='label'>Adresse</label>
+        <input className='input' placeholder='Adresse' type='text' value={adresse} required onChange={(event) => setAdresse(event.target.value)} />
+      </div>
       <div className='row_field'>
         <div className='field'>
           <label className='label'>Téléphone</label>
@@ -58,13 +62,13 @@ function Ajout_formateur() {
           <input className='input' placeholder='Diplôme' type='text' value={diplome} required onChange={(event) => setDiplome(event.target.value)} />
         </div>
         <div className='field'>
-          <label className='label'>Spécialite</label>
-          <input className='input' placeholder='Spécialite' type='text' value={specialite} required onChange={(event) => setSpecialite(event.target.value)} />
+          <label className='label'>Spécialité</label>
+          <input className='input' placeholder='Spécialité' type='text' value={specialite} required onChange={(event) => setSpecialite(event.target.value)} />
         </div>
       </div>
-          <div className="buttoncontainer">
-              <button className='button'>Terminer</button>
-              </div>
+      <div className="buttoncontainer">
+        <button className='button'>Terminer</button>
+      </div>
 
     </form>
   )
