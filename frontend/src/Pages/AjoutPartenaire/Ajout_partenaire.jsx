@@ -68,7 +68,7 @@ function Ajout_partenaire() {
       </div>
       <div className='field'>
               <label className='label'>Notes</label>
-              <input className='input' placeholder='Notes' type='text' value={notes} required onChange={(event) => setNotes(event.target.value)} />
+              <input className='input' placeholder='Notes' type='text' value={notes} onChange={(event) => setNotes(event.target.value)} />
           </div>
           <div className="buttoncontainer">
               <button className='button'>Terminer</button>
