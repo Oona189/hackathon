@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './form2.css'
+import APIService from '../../Components/APIService';
 
 function Ajout_partenaire() {
   const [sigle, setSigle] = useState("");
@@ -7,9 +8,9 @@ function Ajout_partenaire() {
   const [denomination, setDenomination] = useState("");
   const [adresse, setAdresse] = useState("");
   const [pays, setPays] = useState("");
-  const [tlp, setTlp] = useState("");
+  const [tel, setTlp] = useState("");
   const [fax, setFax] = useState("");
-  const [email, setEmail] = useState("");
+  const [mail, setEmail] = useState("");
   const [url, setURL] = useState("");
   const [notes, setNotes] = useState("");
 
@@ -17,7 +18,7 @@ function Ajout_partenaire() {
 
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    APIService.SetPartenaire({sigle,denomination,categorie,adresse,pays,tel,fax,mail,url,notes}).then((rest)=>alert("Partenaire créé")).catch(Error => console.log(Error));
   };
   return (
     <form className='form' onSubmit={handleSubmit}>
@@ -49,7 +50,7 @@ function Ajout_partenaire() {
       <div className='row_field'>
         <div className='field'>
           <label className='label'>Téléphone</label>
-          <input className='input' placeholder='Téléphone' type='tel' value={tlp} required onChange={(event) => setTlp(event.target.value)} />
+          <input className='input' placeholder='Téléphone' type='tel' value={tel} required onChange={(event) => setTlp(event.target.value)} />
         </div>
         <div className='field'>
           <label className='label'>Fax</label>
@@ -59,7 +60,7 @@ function Ajout_partenaire() {
       <div className='row_field'>
         <div className='field'>
           <label className='label'>Email</label>
-          <input className='input' placeholder='Email' type='email' value={email} required onChange={(event) => setEmail(event.target.value)} />
+          <input className='input' placeholder='Email' type='email' value={mail} required onChange={(event) => setEmail(event.target.value)} />
         </div>
         <div className='field'>
           <label className='label'>URL</label>

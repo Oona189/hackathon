@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className='app'>
-    <Ajout_thèmes/>
+    <Ajout_partenaire/>
     </div>
   )
 }

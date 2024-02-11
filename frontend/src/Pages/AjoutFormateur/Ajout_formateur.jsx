@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
 import './forms.css'
+import APIService from '../../Components/APIService';
 
 function Ajout_formateur() {
-  const [email, setEmail] = useState("");
-  const [tlp, setTlp] = useState("");
+  const [mail, setEmail] = useState("");
+  const [tel, setTlp] = useState("");
   const [adresse, setAdresse] = useState("");
   const [nom, setNom] = useState("");
   const [prenom, setPrenom] = useState("");
   const [sexe, setSexe] = useState("");
   const [civilite, setCivilite] = useState("");
   const [diplome, setDiplome] = useState("");
-  const [statut, setStatut] = useState("");
+  const [specialite, setSpecialite] = useState("");
   const handleSubmit = (event) => {
-    event.preventDefault();
+    APIService.SetFormateur({mail,adresse,nom,prenom,sexe,civilite,diplome,specialite}).then((rest)=>alert("formateur créé")).catch(Error => console.log(Error));
   };
   return (
     <form className='form' onSubmit={handleSubmit}>
@@ -44,11 +45,11 @@ function Ajout_formateur() {
       <div className='row_field'>
         <div className='field'>
           <label className='label'>Téléphone</label>
-          <input className='input' placeholder='Téléphone' type='tel' value={tlp} required onChange={(event) => setTlp(event.target.value)} />
+          <input className='input' placeholder='Téléphone' type='tel' value={tel} required onChange={(event) => setTlp(event.target.value)} />
         </div>
         <div className='field'>
           <label className='label'>Email</label>
-          <input className='input' placeholder='Email' type='tel' value={email} required onChange={(event) => setEmail(event.target.value)} />
+          <input className='input' placeholder='Email' type='tel' value={mail} required onChange={(event) => setEmail(event.target.value)} />
         </div>
       </div>
       <div className='row_field'>
@@ -57,8 +58,8 @@ function Ajout_formateur() {
           <input className='input' placeholder='Diplôme' type='text' value={diplome} required onChange={(event) => setDiplome(event.target.value)} />
         </div>
         <div className='field'>
-          <label className='label'>Statut</label>
-          <input className='input' placeholder='Statut' type='text' value={statut} required onChange={(event) => setStatut(event.target.value)} />
+          <label className='label'>Spécialite</label>
+          <input className='input' placeholder='Spécialite' type='text' value={specialite} required onChange={(event) => setSpecialite(event.target.value)} />
         </div>
       </div>
           <div className="buttoncontainer">

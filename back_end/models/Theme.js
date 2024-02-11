@@ -2,9 +2,10 @@
 module.exports = (sequelize, DataTypes) => {
     const Theme = sequelize.define("Theme", {
       id: {
-        type: DataTypes.STRING(10),
+        type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
+        autoIncrement:true,
       },
       designation: {
         type: DataTypes.STRING(100),
