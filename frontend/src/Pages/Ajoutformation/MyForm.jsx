@@ -185,10 +185,8 @@ const MyForm = () => {
         }}
       />
      </div>
-      <div className="buttoncontainer">
-        <button className="button" type="submit">
-          Envoyer
-        </button>
+     <div className="buttoncontainer">
+        <button className='button'>Terminer</button>
       </div>
     </form>
   );
