@@ -47,11 +47,11 @@ const FormationCard = (props) => {
                                 clipRule="evenodd"
                             />
                         </svg>
-                        {props.formation.notes}
+                        5
                     </Typography>
                 </div>
                 <Typography color="gray" className="mb-2 font-normal">
-                    Description Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                    {props.formation.notes.substring(0,200)+ "..."}
                 </Typography>
                 <div className="mb-3 flex items-center justify-between">
                     <Typography className="font-normal">{props.formation.datedebut.substring(0, 10)+" / " + props.formation.datefin.substring(0, 10)}</Typography>
