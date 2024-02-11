@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    
 }
 .input {
     padding: 8px;
@@ -57,4 +58,12 @@
     border: none;
     padding: 5px;
     border-radius: 10px;
+  }
+  .buttoncontainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    width: 100%;
   }

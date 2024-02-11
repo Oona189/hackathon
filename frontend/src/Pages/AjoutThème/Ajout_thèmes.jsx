@@ -18,7 +18,7 @@ function Ajout_thèmes() {
     return (
         <form className='form' onSubmit={handleSubmit}>
             <h1 className='title'>Ajouter un thème</h1>
-            <div className='row_field'>
+            <div className='row_field sm:flex-row'>
                 <div className='field'><label className='label'>Domaine :</label></div>
                 <div className='field'><input className='input' placeholder='Domaine' type='text' value={domaine} required onChange={(event) => setDomaine(event.target.value)} /></div>
                 <div className='field'><label className='label'>Niveau :</label></div>

@@ -58,3 +58,11 @@
     padding: 5px;
     border-radius: 10px;
   }
+  .buttoncontainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
