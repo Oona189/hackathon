@@ -237,9 +237,7 @@ const Formparticipant = () => {
       </div>
 
       <div className="buttoncontainer">
-        <button className="button" type="submit">
-          Envoyer
-        </button>
+        <button className='button'>Terminer</button>
       </div>
     </form>
   );
