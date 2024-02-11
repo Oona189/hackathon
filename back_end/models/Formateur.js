@@ -2,9 +2,10 @@
 module.exports = (sequelize, DataTypes) => {
     const Formateur = sequelize.define("Formateur", {
       id: {
-        type: DataTypes.STRING(10),
+        type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
+        autoIncrement:true,
       },
       civilite: {
         type: DataTypes.STRING(20),
