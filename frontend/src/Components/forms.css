@@ -1,0 +1,50 @@
+.row_field {
+    display: flex;
+}
+.input {
+    padding: 10px;
+    margin: 5px 5px;
+    border-radius: 20px;
+    border: 0.1px solid #3D3B40;
+    box-sizing: border-box;
+    width:500px;
+}
+
+
+.input input::placeholder {
+    color: #B2B1B1;
+}
+
+.input input:focus {
+    border-color: #7DADFE;
+}
+
+.label {
+    font-size: 18px;
+    color: #3D3B40;
+    font-weight: 400;
+    
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: #0061B1;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 10px;
+
+}
