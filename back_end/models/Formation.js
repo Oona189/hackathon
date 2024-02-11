@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Formations = sequelize.define("formation", {
+    const Formation = sequelize.define("formation", {
         id: {
           type: DataTypes.STRING(10),
           primaryKey: true,
@@ -30,6 +30,21 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.TEXT,
         },
       });
-  
-    return Formations;
+
+      Formation.associate = (models) => {
+        Formation.hasMany(models.Groupe, {
+          onDelete: "cascade",
+        });
+        Formation.hasMany(models.FormationCharge, {
+          onDelete: "cascade",
+        });
+        Formation.hasMany(models.FormationApprenant, {
+          onDelete: "cascade",
+        });
+        Formation.hasMany(models.FormationPartenaire, {
+          onDelete: "cascade",
+        });
+      }
+
+    return Formation;
   };
