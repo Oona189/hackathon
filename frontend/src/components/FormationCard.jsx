@@ -9,7 +9,7 @@ import {
 import './components.css'
 
 
-const FormationCard = () => {
+const FormationCard = (props) => {
     return (
         <Card className="card border-[0.5px] border-gray-200 w-full h-[250px] items-center max-w-[100rem] flex-row m-auto">
             <CardHeader
@@ -25,11 +25,11 @@ const FormationCard = () => {
             </CardHeader>
             <CardBody className='w-full'>
                 <Typography variant="h6" color="gray" className="mb-2 uppercase text-gray-600 ">
-                    Genre
+                    {props.formation.genre}
                 </Typography>
                 <div className="mb-3 flex items-center justify-between">
-                    <Typography variant="h4" color="blue-gray" className="mb-2">
-                        Objet Objet Objet
+                    <Typography variant="h4" color="blue" className="mb-2">
+                        {props.formation.objet}
                     </Typography>
                     <Typography
                         color="blue-gray"
@@ -47,14 +47,14 @@ const FormationCard = () => {
                                 clipRule="evenodd"
                             />
                         </svg>
-                        Note
+                        {props.formation.notes}
                     </Typography>
                 </div>
                 <Typography color="gray" className="mb-2 font-normal">
                     Description Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
                 </Typography>
                 <div className="mb-3 flex items-center justify-between">
-                    <Typography className="font-normal">Date debut - Date fin</Typography>
+                    <Typography className="font-normal">{props.formation.datedebut.substring(0, 10)+" / " + props.formation.datefin.substring(0, 10)}</Typography>
                     <a href="#" className="inline-block">
                         <Button variant="text" className="flex items-center gap-2">
                             Voir Plus

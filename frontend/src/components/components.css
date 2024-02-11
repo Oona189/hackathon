@@ -1,8 +1,8 @@
 /* CSS */
 .card {
     background-color: #ffffff;
-    transition: transform 100ms ease-in,box-shadow 100ms linear;
     box-shadow: rgb(0 0 0 / 5%) 0 1px 10px;
+    transition: transform 100ms ease-in,box-shadow 100ms linear;
   }
   
 .card:hover {

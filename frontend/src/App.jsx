@@ -1,15 +1,17 @@
 import React from "react";
-import  "./Pages/Ajoutformation/ajoutformation.css";
-import Ajout_thèmes from "./Pages/AjoutThème/Ajout_thèmes";
-import Ajout_partenaire from "./Pages/AjoutPartenaire/Ajout_partenaire";
-import Ajout_formateur from "./Pages/AjoutFormateur/Ajout_formateur";
+import  "./Pages/Ajoutparticipant/ajoutparticipant.css";
+import Formparticipant from "./Pages/Ajoutparticipant/Formparticipant.jsx";
+import Navbar from "./Navbar/Navbar.jsx";
+
+
 function App() {
-
   return (
-    <div className='app'>
-    <Ajout_partenaire/>
-    </div>
-  )
-}
-
-export default App
+    
+    <><div className="container">
+      <Navbar/>
+    <h2 className="title">Ajouter un participant </h2> 
+    <Formparticipant/>
+  </div></>
+    
+  );
+}export default App
