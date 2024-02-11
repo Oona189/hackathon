@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "rahma",
     "database": "hackathon_asi",
     "host": "localhost",
     "dialect": "mysql"
