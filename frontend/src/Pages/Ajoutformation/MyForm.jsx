@@ -45,7 +45,7 @@ const MyForm = () => {
     console.log("Valeur du champ 6:", dateValue6);
     console.log("Valeur du champ 7:", intValue7);
   };
-  
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -134,7 +134,7 @@ const MyForm = () => {
               width: "calc(100% - 30px)",
               margin: "5px",
               borderRadius: "20px",
-              border: "1px solid #3D3B40", 
+              border: "1px solid #3D3B40",
               padding: "8px",
             }}
           />
