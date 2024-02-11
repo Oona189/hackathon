@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './forms.css'
 
 function Ajout_formateur() {
   const [email, setEmail] = useState("");
@@ -38,7 +39,7 @@ function Ajout_formateur() {
       </div>
       <div className='field'>
           <label className='label'>Adresse</label>
-          <input className='input' placeholder='Sigle' type='text' value={adresse} required onChange={(event) => setAdresse(event.target.value)} />
+          <input className='input' placeholder='Adresse' type='text' value={adresse} required onChange={(event) => setAdresse(event.target.value)} />
         </div>
       <div className='row_field'>
         <div className='field'>

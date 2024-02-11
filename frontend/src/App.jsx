@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className='app'>
-    <Ajout_formateur/>
+    <Ajout_thèmes/>
     </div>
   )
 }

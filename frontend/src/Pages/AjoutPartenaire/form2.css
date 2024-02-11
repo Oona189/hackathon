@@ -1,13 +1,14 @@
 .row_field {
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 .input {
     padding: 8px;
     border-radius: 20px;
     border: 0.1px solid #3D3B40;
     width: calc(100% - 20px);
-    margin: 5px;
+    margin: 10px;
 }
 
 
@@ -29,12 +30,16 @@
 .field {
     display: flex;
     flex-direction: column;
+    justify-content: start;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-rows: auto minmax(auto,100px);
     margin: 10px;
+
 }
 
 .title {
@@ -43,7 +48,6 @@
     font-size: 40px;
     font-weight: bold;
     font-style: italic;
-    margin-bottom: 10px;
 
 }
 .button {
