@@ -47,7 +47,7 @@ const MyForm = () => {
       className="form"
     >
      <div>
-     <div style={{ marginLeft: "10px" }}>Code organisme</div>
+     <div style={{ marginLeft: "10px" ,color:"#3D3B40"}}>Code organisme</div>
      <input
         type="text"
         value={code_organisme}
@@ -66,7 +66,7 @@ const MyForm = () => {
 
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div>
-          <div style={{ marginLeft: "10px" }}>Code</div>
+          <div style={{ marginLeft: "10px" ,color:"#3D3B40"}}>Code</div>
           <input
             type="text"
             value={code}
@@ -83,7 +83,7 @@ const MyForm = () => {
         </div>
 
         <div>
-          <div style={{ marginLeft: "10px" }}>Nombre de participants</div>
+          <div style={{ marginLeft: "10px",color:"#3D3B40" }}>Nombre de participants</div>
           <input
             type="number"
             value={nbthemes}
@@ -101,7 +101,7 @@ const MyForm = () => {
       </div>
 
 <div>
-<div style={{ marginLeft: "10px" }}>Objet</div>
+<div style={{ marginLeft: "10px",color:"#3D3B40" }}>Objet</div>
 <input
         type="text"
         value={objet}
@@ -119,7 +119,7 @@ const MyForm = () => {
 
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div>
-          <div style={{ marginLeft: "10px" }}>Date debut</div>
+          <div style={{ marginLeft: "10px" ,color:"#3D3B40"}}>Date debut</div>
           <input
             type="date"
             value={datedebut}
@@ -136,7 +136,7 @@ const MyForm = () => {
         </div>
 
         <div>
-          <div style={{ marginLeft: "10px" }}>Date fin</div>
+          <div style={{ marginLeft: "10px",color:"#3D3B40" }}>Date fin</div>
           <input
             type="date"
             value={datefin}
@@ -153,7 +153,7 @@ const MyForm = () => {
         </div>
 
         <div>
-          <div style={{ marginLeft: "10px" }}>Exercice</div>
+          <div style={{ marginLeft: "10px" ,color:"#3D3B40"}}>Exercice</div>
           <input
             type="number"
             value={duree}
@@ -170,7 +170,7 @@ const MyForm = () => {
         </div>
       </div>
       <div>
-     <div style={{ marginLeft: "10px" }}>Notes</div>
+     <div style={{ marginLeft: "10px" ,color:"#3D3B40"}}>Notes</div>
      <input
         type="text"
         value={notes}

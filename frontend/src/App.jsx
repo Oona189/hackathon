@@ -1,4 +1,5 @@
 import React from "react";
+
 import  "./Pages/Ajoutparticipant/ajoutparticipant.css";
 import Ajouformation from "./Pages/Ajoutformation/Ajout_Formation.jsx";
 import Ajout_formateur from "./Pages/AjoutFormateur/Ajout_formateur.jsx";
@@ -8,6 +9,7 @@ import Ajout_partenaire from "./Pages/AjoutPartenaire/Ajout_partenaire.jsx";
 import NavBar from "./Navbar/Navbar.jsx";
 import Formations from './Pages/Formations';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 
 function App() {
