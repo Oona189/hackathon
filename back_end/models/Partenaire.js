@@ -1,10 +1,11 @@
 // models/partenaire.js
 module.exports = (sequelize, DataTypes) => {
-  const Partenaire = sequelize.define("partenaire", {
+  const Partenaire = sequelize.define("Partenaire", {
     id: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
+      autoIncrement:true,
     },
     sigle: {
       type: DataTypes.STRING(50),
@@ -16,7 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     denominationar: {
       type: DataTypes.STRING(200),
-      allowNull: false,
     },
     categorie: {
       type: DataTypes.STRING(20),

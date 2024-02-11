@@ -1,0 +1,10 @@
+
+.container{
+  width: fit-content;
+  margin: auto; 
+}
+
+.title {
+    text-align: center;
+    color: rgb(0, 97, 177);
+  }

@@ -36,10 +36,17 @@ module.exports = (sequelize, DataTypes) => {
     notes: {
       type: DataTypes.TEXT,
     },
+    PartenaireId: {
+      type: DataTypes.INTEGER, 
+    }
   });
 
 
   Apprenant.associate = (models) => {
+    Apprenant.belongsTo(models.Partenaire, {
+      foreignKey: 'PartenaireId',
+      as: 'partenaire',
+    });
     Apprenant.hasMany(models.GroupeApprenant, {
       onDelete: "cascade",
     });
