@@ -284,7 +284,7 @@ function Ajout_partenaire() {
           <div className='row_field'>
         <div className='field'>
           <label className='label'>Adresse</label>
-          <input className='input' placeholder='Sigle' type='text' value={adresse} required onChange={(event) => setAdresse(event.target.value)} />
+          <input className='input' placeholder='Adresse' type='text' value={adresse} required onChange={(event) => setAdresse(event.target.value)} />
         </div>
         <div className='field'>
           <label className='label'>Pays</label>

@@ -59,7 +59,7 @@ const Formparticipant = () => {
       
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div>
-          <div style={{ marginLeft: "10px" }}>Code Organisme</div>
+          <div style={{ marginLeft: "10px" ,color:"#3D3B40"}}>Code Organisme</div>
           <input
             type="text"
             value={code_organisme}
@@ -80,7 +80,7 @@ const Formparticipant = () => {
 
 
           
-          <div style={{ marginLeft: "10px" }}>Matricule</div>
+          <div style={{ marginLeft: "10px" ,color:"#3D3B40"}}>Matricule</div>
           <input
             type="text"
             value={id}
@@ -101,7 +101,7 @@ const Formparticipant = () => {
 
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div>
-          <div style={{ marginLeft: "10px" }}>Nom</div>
+          <div style={{ marginLeft: "10px",color:"#3D3B40" }}>Nom</div>
           <input
             type="text"
             value={nom}
@@ -122,7 +122,7 @@ const Formparticipant = () => {
 
 
           
-          <div style={{ marginLeft: "10px" }}>Prenom</div>
+          <div style={{ marginLeft: "10px" ,color:"#3D3B40"}}>Prenom</div>
           <input
             type="text"
             value={prenom}
@@ -141,7 +141,7 @@ const Formparticipant = () => {
 
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div>
-          <div style={{ marginLeft: "10px" }}>Sexe</div>
+          <div style={{ marginLeft: "10px" ,color:"#3D3B40"}}>Sexe</div>
           <input
             type="text"
             value={sexe}
@@ -162,7 +162,7 @@ const Formparticipant = () => {
 
 
           
-          <div style={{ marginLeft: "10px" }}>Date de naissance</div>
+          <div style={{ marginLeft: "10px" ,color:"#3D3B40"}}>Date de naissance</div>
           <input
             type="date"
             value={dateNaissance}
@@ -180,7 +180,7 @@ const Formparticipant = () => {
       </div>
      
       <div>
-          <div style={{ marginLeft: "10px" }}>Adresse</div>
+          <div style={{ marginLeft: "10px" ,color:"#3D3B40"}}>Adresse</div>
           <input
             type="text"
             value={adresse}
@@ -198,7 +198,7 @@ const Formparticipant = () => {
 
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div>
-          <div style={{ marginLeft: "10px" }}>Téléphone</div>
+          <div style={{ marginLeft: "10px",color:"#3D3B40" }}>Téléphone</div>
           <input
             type="text"
             value={tel}
@@ -219,7 +219,7 @@ const Formparticipant = () => {
 
 
           
-          <div style={{ marginLeft: "10px" }}>Email</div>
+          <div style={{ marginLeft: "10px",color:"#3D3B40" }}>Email</div>
           <input
             type="text"
             value={mail}

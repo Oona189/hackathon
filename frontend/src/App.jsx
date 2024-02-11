@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar/Navbar.jsx";
-import Ajout_Participant from "./Pages/Ajoutparticipant/Ajout_Participant.jsx";
+import Ajout_Formation from "./Pages/Ajoutformation/Ajout_Formation.jsx";
 
 
 function App() {
@@ -8,7 +8,8 @@ function App() {
 
     <>
       <Navbar />
-      <Ajout_Participant/></>
+      <Ajout_Formation/>
+      </>
 
   );
 } export default App
