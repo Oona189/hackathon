@@ -2,7 +2,7 @@ import React from "react";
 import "./ajoutparticipant.css";
 import Formparticipant from "./Formparticipant";
 
-function ajoutparticipant() {
+function Ajoutparticipant() {
   return (
     
     <div className="container">
@@ -11,4 +11,4 @@ function ajoutparticipant() {
     </div>
     
   );
-}export default ajoutparticipant;
+}export default Ajoutparticipant;
