@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Formation = sequelize.define("formation", {
+    const Formation = sequelize.define("Formation", {
         id: {
           type: DataTypes.STRING(10),
           primaryKey: true,
