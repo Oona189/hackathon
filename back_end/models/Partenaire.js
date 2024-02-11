@@ -1,6 +1,6 @@
 // models/partenaire.js
 module.exports = (sequelize, DataTypes) => {
-  const Partenaire = sequelize.define("partenaire", {
+  const Partenaire = sequelize.define("Partenaire", {
     id: {
       type: DataTypes.STRING(20),
       primaryKey: true,
