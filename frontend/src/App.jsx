@@ -1,17 +1,14 @@
 import React from "react";
-import  "./Pages/Ajoutparticipant/ajoutparticipant.css";
-import Formparticipant from "./Pages/Ajoutparticipant/Formparticipant.jsx";
 import Navbar from "./Navbar/Navbar.jsx";
+import Ajout_Participant from "./Pages/Ajoutparticipant/Ajout_Participant.jsx";
 
 
 function App() {
   return (
-    
-    <><div className="container">
-      <Navbar/>
-    <h2 className="title">Ajouter un participant </h2> 
-    <Formparticipant/>
-  </div></>
-    
+
+    <>
+      <Navbar />
+      <Ajout_Participant/></>
+
   );
-}export default App
+} export default App

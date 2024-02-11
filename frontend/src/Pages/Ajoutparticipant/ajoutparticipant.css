@@ -5,6 +5,9 @@
 }
 
 .title {
-    text-align: center;
-    color: rgb(0, 97, 177);
+  color: #0061B1;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
   }

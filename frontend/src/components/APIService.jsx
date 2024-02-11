@@ -20,4 +20,18 @@ export default class APIService {
                 body: JSON.stringify(body)
               }).then(resp => resp.json())
             }
+            static SetFormation(body){
+              return fetch('http://localhost:3001/formation', {
+                  'method': 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(body)
+                }).then(resp => resp.json())
+              }
+              static SetApprenant(body){
+                return fetch('http://localhost:3001/apprenant', {
+                    'method': 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                  }).then(resp => resp.json())
+                }
 }
