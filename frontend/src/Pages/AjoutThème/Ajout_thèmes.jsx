@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./forms.css"
-import APIService from '../../Components/APIService';
+import APIService from '../../components/APIService';
 
 function Ajout_thèmes() {
     const [domaine, setDomaine] = useState("");

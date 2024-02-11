@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './form2.css'
-import APIService from '../../Components/APIService';
+import APIService from '../../components/APIService';
 
 function Ajout_partenaire() {
   const [sigle, setSigle] = useState("");
