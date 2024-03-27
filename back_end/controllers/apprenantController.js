@@ -1,5 +1,5 @@
 const { Apprenant, Partenaire } = require("../models");
-
+// comment added here
 const getAllApprenants = async (req, res) => {
   try {
     const apprenants = await Apprenant.findAll({
